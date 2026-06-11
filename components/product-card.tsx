@@ -16,7 +16,7 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <div className="group flex flex-col">
       <div className="relative aspect-square overflow-hidden rounded-lg bg-secondary">
-        <Link href={`/product/${product.slug}`}>
+        <Link href={`/product/${product.slug}`} className="absolute inset-0">
           <Image
             src={product.images[0] || '/placeholder.svg'}
             alt={product.name}

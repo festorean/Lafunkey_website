@@ -18,11 +18,9 @@ export function BestSellers() {
             title="Best sellers"
             description="The pieces our customers can't stop wearing."
           />
-          <Button asChild variant="outline" className="shrink-0">
-            <Link href="/shop">
-              View all
-              <ArrowRight data-icon="inline-end" />
-            </Link>
+          <Button variant="outline" className="shrink-0" render={<Link href="/shop" />}>
+            View all
+            <ArrowRight data-icon="inline-end" />
           </Button>
         </div>
         <div className="mt-10 grid grid-cols-2 gap-5 lg:grid-cols-4">

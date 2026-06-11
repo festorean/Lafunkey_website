@@ -234,11 +234,11 @@ export function ShopClient({ initialCategory }: { initialCategory?: Category }) 
 
             <div className="flex items-center gap-3">
               <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="outline" className="lg:hidden">
-                    <SlidersHorizontal data-icon="inline-start" />
-                    Filters
-                  </Button>
+                <SheetTrigger
+                  render={<Button variant="outline" className="lg:hidden" />}
+                >
+                  <SlidersHorizontal data-icon="inline-start" />
+                  Filters
                 </SheetTrigger>
                 <SheetContent side="left" className="w-80 overflow-y-auto p-6">
                   <SheetHeader className="px-0">

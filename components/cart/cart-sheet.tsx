@@ -48,8 +48,8 @@ export function CartSheet() {
                 Discover our premium accessories.
               </p>
             </div>
-            <Button asChild onClick={() => setOpen(false)}>
-              <Link href="/shop">Start shopping</Link>
+            <Button onClick={() => setOpen(false)} render={<Link href="/shop" />}>
+              Start shopping
             </Button>
           </div>
         ) : (
@@ -133,18 +133,18 @@ export function CartSheet() {
                 Shipping & pay-on-delivery options confirmed at checkout.
               </p>
               <Button
-                asChild
                 size="lg"
                 className="w-full bg-[#25D366] text-white hover:bg-[#1ebe5a]"
+                render={
+                  <a
+                    href={whatsappLink(orderMessage)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  />
+                }
               >
-                <a
-                  href={whatsappLink(orderMessage)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <MessageCircle data-icon="inline-start" />
-                  Checkout via WhatsApp
-                </a>
+                <MessageCircle data-icon="inline-start" />
+                Checkout via WhatsApp
               </Button>
               <Button
                 variant="outline"

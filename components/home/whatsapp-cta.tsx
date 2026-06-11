@@ -19,20 +19,20 @@ export function WhatsAppCta() {
           </p>
         </div>
         <Button
-          asChild
           size="lg"
           className="bg-white text-[#128C3E] hover:bg-white/90"
+          render={
+            <a
+              href={whatsappLink(
+                `Hello ${BRAND.shortName}! I'd like to place an order.`,
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+            />
+          }
         >
-          <a
-            href={whatsappLink(
-              `Hello ${BRAND.shortName}! I'd like to place an order.`,
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MessageCircle data-icon="inline-start" />
-            Chat on WhatsApp
-          </a>
+          <MessageCircle data-icon="inline-start" />
+          Chat on WhatsApp
         </Button>
       </div>
     </section>
