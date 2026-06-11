@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Mail, Phone, MapPin, MessageCircle, Instagram, Twitter, Facebook } from 'lucide-react'
+import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react'
+import { FaInstagram, FaFacebook, FaXTwitter } from 'react-icons/fa6'
 import { Button } from '@/components/ui/button'
 import { ContactForm } from '@/components/contact/contact-form'
 import { BRAND, whatsappLink } from '@/lib/brand'
@@ -11,9 +12,9 @@ export const metadata: Metadata = {
 }
 
 const SOCIALS = [
-  { icon: Instagram, label: 'Instagram', href: BRAND.socials.instagram },
-  { icon: Twitter, label: 'Twitter', href: BRAND.socials.twitter },
-  { icon: Facebook, label: 'Facebook', href: BRAND.socials.facebook },
+  { icon: FaInstagram, label: 'Instagram', href: BRAND.socials.instagram },
+  { icon: FaXTwitter, label: 'Twitter', href: BRAND.socials.twitter },
+  { icon: FaFacebook, label: 'Facebook', href: BRAND.socials.facebook },
 ]
 
 export default function ContactPage() {
